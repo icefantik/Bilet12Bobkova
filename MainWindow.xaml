@@ -1,0 +1,48 @@
+﻿<Window x:Class="Statement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Statement"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+
+		<Button x:Name="EditButton" Content="Edit"
+				Grid.Column="8" Grid.Row="8"
+				Click="EditButton_Click"/>
+
+		<Button x:Name="OpenExcelButton" Content="Open Excel"
+				Grid.Column="1" Grid.Row="8"
+				Click="OpenExcelButton_Click"/>
+
+		<DataGrid x:Name="JournalRowsGrid"
+				  Grid.Row="2" Grid.RowSpan="5" Grid.Column="1" Grid.ColumnSpan="8"
+				  IsReadOnly="True"
+				  AutoGenerateColumns="True" ColumnWidth="*"/>
+	</Grid>
+</Window>
